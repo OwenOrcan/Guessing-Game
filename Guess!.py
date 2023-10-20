@@ -37,7 +37,8 @@ while True:
         guess = input("Guess The Card: ").lower()
         if guess == random_card:
             print("CORRECT!")
-            balance = bet * 2
+            balance = balance - bet
+            balance = balance + (bet*2)
             print(f"Your balance is ${balance}")
 
             user_continue_choice = str(input("Do you want to continue? y/n ")).lower()
