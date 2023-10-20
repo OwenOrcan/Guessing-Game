@@ -1,10 +1,13 @@
 import random
 
 cards = ["ace of spades","king of spades","queen of spades", "jack of spades"]
+cards2 = ["ace of hearts","king of hearts","queen of hearts", "jack of hearts"]
 print("                GUESSING GAME!                        ")
 while True:
     try:
         balance = int(input("Deposit Balance: "))
+        if type(balance) == float:
+            print("Please Deposit Full Amounts.")
         if balance <= 0:
             print("Balance Cannot Be Negative or 0")
         elif balance > 1000:
@@ -20,9 +23,14 @@ while True:
         print("You Do Not Have Any Money.")
         break
     try:
-        print("Dealers Hand:\n", cards)
+        choose_deck = random.choice(["card1", "card2"])
+        if choose_deck == "card1":
+            hand = cards
+        elif choose_deck == "card2":
+            hand = cards2
+        print("Dealers Hand:\n", hand)
         print(f"Current Balance: ${balance}")
-        random_card = random.choice(cards)
+        random_card = random.choice(hand)
         try:
             bet = int(input("Bet: "))
         except Exception:
