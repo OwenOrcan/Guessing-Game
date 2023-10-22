@@ -42,7 +42,7 @@ while playing:
             print("!!!!!!!!!!!!!!!!!Please Try Again!!!!!!!!!!!!!!!!!!!!!!!!!!")
             continue
         if bet > balance:
-            print("!!!!!!!!!!!!!!!!Unsufficent Funds!!!!!!!!!!!!!!!!!!!!!")
+            print("!!!!!!!!!!!!!!!!Insufficent Funds!!!!!!!!!!!!!!!!!!!!!")
             continue
         if bet < 0:
             print("Cannot Bet $0!")
