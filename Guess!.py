@@ -6,7 +6,6 @@ os.system('color 2')
 playing = True
 
 
-
 cards = ["ace of spades","king of spades","queen of spades", "jack of spades"]
 cards2 = ["ace of hearts","king of hearts","queen of hearts", "jack of hearts"]
 print("                                    GUESS!                      ")
